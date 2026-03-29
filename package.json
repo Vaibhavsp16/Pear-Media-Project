@@ -1,0 +1,30 @@
+{
+  "name": "pear-media-ai-studio",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=20.11.0"
+  },
+  "scripts": {
+    "dev": "concurrently \"npm run dev:server\" \"npm run dev:client\"",
+    "dev:server": "node --env-file=.env server/dev-server.js",
+    "dev:client": "vite --host",
+    "build": "vite build",
+    "preview": "vite preview --host",
+    "start": "node --env-file=.env server/dev-server.js"
+  },
+  "dependencies": {
+    "@huggingface/inference": "^4.8.0",
+    "cors": "^2.8.5",
+    "express": "^4.21.2",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "serverless-http": "^3.2.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.4.1",
+    "concurrently": "^9.2.0",
+    "vite": "^6.3.0"
+  }
+}
